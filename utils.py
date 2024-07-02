@@ -38,10 +38,10 @@ def http_client():
 @functools.cache
 def get_config():
     return {
-        "collections": path.join(browser_path, 'collections'),
-        "download_logs": path.join(browser_path, 'download_logs'),
+        "collections": path.join(args.data_dir, 'collections'),
+        "download_logs": path.join(args.data_dir, 'download_logs'),
         "outputs": output_directory_from_comfyui(),
-        "sources": path.join(browser_path, 'sources'),
+        "sources": path.join(args.data_dir, 'sources'),
     } | load_config()
 
 def load_config():
