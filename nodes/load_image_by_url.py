@@ -40,6 +40,7 @@ class LoadImageByUrl:
         while cnt > 0:
             try:
                 res = http_client().get(self.url, timeout=5)
+                break
             except:
                 cnt = cnt - 1
         if res.status_code == 200:
